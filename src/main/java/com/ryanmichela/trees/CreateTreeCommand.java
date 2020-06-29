@@ -67,7 +67,7 @@ public class CreateTreeCommand implements CommandExecutor {
     if (player.hasPermission("gianttrees.create")) {
       final Chunk chunk = player.getLocation().getChunk();
       final World world = chunk.getWorld();
-      final Random seed = new Random(world.getSeed());
+      final Random seed = new Random();
 
       final String species = arg[0];
       final File treeFile = new File(this.plugin.getDataFolder(), species

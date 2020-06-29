@@ -112,7 +112,7 @@ public class PlantTreeEventHandler implements Listener {
               && recipe.matches(clickedBlock)) {
         final String treeType = identifyTree(clickedBlock);
         if (treeType != null) {
-          final Random seed = new Random(clickedBlock.getWorld().getSeed());
+          final Random seed = new Random();
           final File treeFile = new File(plugin.getDataFolder(), "tree."
                   + treeType
                   + ".xml");

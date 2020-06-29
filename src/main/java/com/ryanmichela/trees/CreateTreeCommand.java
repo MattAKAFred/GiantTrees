@@ -21,10 +21,8 @@ import java.io.File;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.command.Command;
@@ -65,8 +63,6 @@ public class CreateTreeCommand implements CommandExecutor {
 
     final Player player = (Player) sender;
     if (player.hasPermission("gianttrees.create")) {
-      final Chunk chunk = player.getLocation().getChunk();
-      final World world = chunk.getWorld();
       final Random seed = new Random();
 
       final String species = arg[0];

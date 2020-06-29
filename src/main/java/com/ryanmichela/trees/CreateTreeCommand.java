@@ -88,8 +88,12 @@ public class CreateTreeCommand implements CommandExecutor {
 
       final Location base = highestSoil.getLocation();
       this.popup.sendPopup(player, "Stand back!");
+      // Expose tree seed
+      final int treeSeed_m = seed.nextInt();
+      sender.sendMessage("Seed: " + treeSeed_m);
+      
       this.renderer.renderTreeWithHistory(base, treeFile, rootFile,
-                                          seed.nextInt(), player, true);
+                                          treeSeed_m, player, true);
     }
     return true;
   }
